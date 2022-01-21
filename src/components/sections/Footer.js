@@ -1,5 +1,11 @@
 import React from 'react';
 
+// Importing files will store file's address in var
+import insta_logo from '../../images/instagram.png'
+import fb_logo from '../../images/facebook.png'
+import twitter_logo from '../../images/twitter.png'
+import linkedin_logo from '../../images/linkedin.png'
+
 const Footer = () => {
     return(
         <div>
@@ -22,19 +28,19 @@ const Footer = () => {
                             <div class="footer-logo-flex-container">
                                 <div class="footer-logos">
                                     <div class="footer--logo">
-                                        {/* <a href="#"><img src="./images/instagram.png" alt="Instagram Icon"></a> */}
+                                        <a href="#"><img src={insta_logo} alt="Instagram Icon" /></a>
                                     </div>
                                     
                                     <div class="footer--logo">
-                                        {/* <a href="#"><img src="./images/facebook.png" alt="Facebook Icon"></a> */}
+                                        <a href="#"><img src={fb_logo} alt="Facebook Icon" /></a>
                                     </div>
                                     
                                     <div class="footer--logo">
-                                        {/* <a href="#"><img src="./images/linkedin.png" alt="LinkedIn Icon"></a> */}
+                                        <a href="#"><img src={linkedin_logo} alt="LinkedIn Icon" /></a>
                                     </div>
                                     
                                     <div class="footer--logo">
-                                        {/* <a href="#"><img src="./images/twitter.png" alt="Twitter Icon"></a> */}
+                                        <a href="#"><img src={twitter_logo} alt="Twitter Icon" /></a>
                                     </div>
                                     
                                 </div>
