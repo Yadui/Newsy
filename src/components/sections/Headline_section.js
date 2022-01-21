@@ -1,6 +1,13 @@
 import React from 'react';
 
+import StaticNewsCards from './StaticNewsCards';
+
 const Headline_section = () => {
+
+
+    
+
+
     return(
         <div>
             <div class="headline-section">
@@ -26,44 +33,7 @@ const Headline_section = () => {
                                 </div>
                             </menu>
                             <div class="headline-cards">
-                                <div id="all-cards" class="all-cards">
-                                    <div class="card">All Category Card1</div>
-                                    <div class="card">All Category Card2</div>
-                                    <div class="card">All Category Card3</div>
-                                    
-                                </div>
-                                <div id="india-cards" class="india-cards">
-                                    <div class="card">INDIA Category Card1</div>
-                                    <div class="card">INDIA Category Card2</div>
-                                    <div class="card">INDIA Category Card3</div>
-                                    <div class="card">INDIA Category Card4</div>
-                                    <div class="card">INDIA Category Card5</div>
-                                    <div class="card">INDIA Category Card6</div>
-                                </div>
-                                <div id="usa-cards" class="usa-cards">
-                                    <div class="card">USA Category Card1</div>
-                                    <div class="card">USA Category Card2</div>
-                                    <div class="card">USA Category Card3</div>
-                                    <div class="card">USA Category Card4</div>
-                                    <div class="card">USA Category Card5</div>
-                                    <div class="card">USA Category Card6</div>
-                                </div>
-                                <div id="uk-cards" class="uk-cards">
-                                    <div class="card">UK Category Card1</div>
-                                    <div class="card">UK Category Card2</div>
-                                    <div class="card">UK Category Card3</div>
-                                    <div class="card">UK Category Card4</div>
-                                    <div class="card">UK Category Card5</div>
-                                    <div class="card">UK Category Card6</div>
-                                </div>
-                                <div id="canada-cards" class="canada-cards">
-                                    <div class="card">Canada Category Card1</div>
-                                    <div class="card">Canada Category Card2</div>
-                                    <div class="card">Canada Category Card3</div>
-                                    <div class="card">Canada Category Card4</div>
-                                    <div class="card">Canada Category Card5</div>
-                                    <div class="card">Canada Category Card6</div>
-                                </div>
+                                <StaticNewsCards />
                             </div>
                         </div>
                     </div>
