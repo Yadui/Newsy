@@ -14,7 +14,7 @@ const Information = () => {
                         <div class="inst-cards">
                             <div class="inst--card">
                                 <div class="inst-logo">
-                                    <img src={category_logo} alt="Category" />
+                                    <img src={category_logo} alt="" />
                                 </div>
                                 <h4 class="inst--head">News By Categories</h4>
                                 <p class="inst--content">Business, Entertainement, General, Health, Souce, Sports, Technology</p>
