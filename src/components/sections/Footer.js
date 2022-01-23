@@ -9,9 +9,9 @@ import linkedin_logo from '../../images/linkedin.png'
 const Footer = () => {
     return(
         <div>
-            <footer class="footer">
-                <div class="footer-container container-center">
-                    <h3 class="logo">Logo</h3>
+            <footer class="footer container-center">
+                    <div class="footer-container">
+                        <h3 class="logo">Logo</h3>
                     <div class="footer-info">
                         <div class="footer-developer">
                             <h4>Developed by</h4>
