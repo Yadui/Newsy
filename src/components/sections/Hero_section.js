@@ -3,22 +3,28 @@ import React from 'react';
 const Hero_section = () => {
     return(
         <div>
+            <nav class="header-nav">
+                <div class="logo">LOGO</div>
+                <div class="navigations">
+                    <a href="#" class="navigation">Home</a>
+                    <a href="#" class="navigation">About</a>
+                    <a href="#" class="navigation">Team</a>
+                    <a href="#" class="navigation active--nav">Contact</a>
+                </div>
+                <div class="navigations-responsive">
+                    <div class="nav-bar active--nav">Nav</div>
+                    <div class="nav-bar-items">
+                        <a href="#" class="navigation navigation-res">Home</a>
+                        <a href="#" class="navigation navigation-res">About</a>
+                        <a href="#" class="navigation navigation-res">Team</a>
+                        <a href="#" class="navigation navigation-res">Contact</a>
+                    </div>
+                </div>
+            </nav>
             <div class = "background-container">
-                <div className="container-center">
                     <div class="hero-section">
                         <div class="header">
-                            <div class="container-center">
-                                <nav class="header-nav">
-                                    <div class="logo">LOGO</div>
-                                    <div class="navigations">
-                                        <div class="navigation">Home</div>
-                                        <div class="navigation">About</div>
-                                        <div class="navigation">Team</div>
-                                        <div class="navigation active--nav">Contact</div>
-                                    </div>
-                                </nav>
-                            </div>
-                            <div class="header-container">
+                            <div class="header-container container-center">
                                 <div class="header-container-inner header-info">
                                     <h1>DEFINITIVE CONSUMER DATA FOR TECHNOLOGY</h1>
                                     <p>
@@ -32,7 +38,6 @@ const Hero_section = () => {
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     )
