@@ -12,8 +12,9 @@ const Headline_section = () => {
         <div>
             <div class="headline-section">
                 <div class="container-center">
-                    <div class="headline-section-container">
-                        <div class="headline-header headline-center">
+                    <div>
+                        <div class="headline-section-container">
+                            <div class="headline-header headline-center">
                             <h2>Unrivalled intelligence on the Technology sector</h2>
                             <p>
                                 Leveraging our proprietary panel of 15 million people worldwide, YouGov 
@@ -37,6 +38,7 @@ const Headline_section = () => {
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>

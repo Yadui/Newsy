@@ -20,7 +20,7 @@ const StaticNewsCards = () => {
             newArticles.push(data.articles[i]);
         }
         setArticles(newArticles);
-        console.log(articles);
+        // console.log(articles);
     })
     .catch((error) => console.log("Error"));
 
