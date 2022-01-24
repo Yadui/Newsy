@@ -10,7 +10,7 @@ const Information = () => {
             <div class="instructions-section">
                 <div class="container-center">
                     <div class="instructions">
-                        <h2>Discover how YouGov can help you</h2>
+                        <h2>Discover how Newsy can help you</h2>
                         <div class="inst-cards">
                             <div class="inst--card">
                                 <div class="inst-logo">

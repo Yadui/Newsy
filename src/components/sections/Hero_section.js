@@ -28,10 +28,10 @@ const Hero_section = () => {
                                 <div class="header-container-inner header-info">
                                     <h1>DEFINITIVE CONSUMER DATA FOR TECHNOLOGY</h1>
                                     <p>
-                                        Audience intelligence, brand trackers, reports and articles – compiled using 25,000 data variables from the YouGov Cube.
+                                        Audience intelligence, brand trackers, reports and articles – compiled using 25,000 data variables from the Newsy Cube.
                                     </p>
                                     <div class="hero--btns">
-                                        <button class="btn large--btn hero--left--btn">Try the YouGov Platform</button>
+                                        <button class="btn large--btn hero--left--btn">Try the Newsy Platform</button>
                                         <button class="btn large--btn hero--right--btn">Launch a Survey</button>
                                     </div>
                                 </div>                        
