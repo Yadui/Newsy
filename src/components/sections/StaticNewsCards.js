@@ -18,7 +18,7 @@ import India from "./India";
 const StaticNewsCards = () => {
     const [articles, setArticles] = useState([]);
 
-    const API_KEY = "";
+    const API_KEY = "c4b46fbfe276407bba595c50214a4ebc";
     let NEWS_API_URL =
     "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + API_KEY;
 
@@ -40,33 +40,7 @@ const StaticNewsCards = () => {
 
 
 
-    $(document).ready(function() {
-        $('.tabs .tab-links a').on('click', function(e) {
-            var currentAttrValue = $(this).attr('href');
     
-            // Show/Hide Tabs
-            $('.tabs ' + currentAttrValue).show().siblings().hide();
-    
-            // Change/remove current tab to active
-            $(this).parent('li').addClass('active-tab').siblings().removeClass('active-tab');
-    
-            e.preventDefault();
-        });
-    });
-    
-    const tabs2 = document.querySelectorAll('[data-tab-target]')
-    const tabssContent = document.querySelectorAll('[data-tab-content]')
-    
-    
-    tabs2.forEach((tab) => {
-        tab.addEventListener('click', ()=>{
-            const target = document.querySelector(tab.dataset.tabTarget)
-            tabssContent.forEach((tabContent) => {
-                tabContent.classList.remove('active-tab')
-            })
-            target.classList.add('active-tab')
-        })
-    })
 
 
 
@@ -75,26 +49,25 @@ const StaticNewsCards = () => {
 
 
     return (
-        <div>
-            <div id="All" data-tab-content class="active-tab">
-                {articles.map((article) => {
-                    return (
-                        <div>
-                            <Card 
-                                tab = "All"
-                                urlToImage = {article.urlToImage}
-                                publisedAt = {article.publishedAt}
-                                srcName = {article.source.name}
-                                title = {article.title}
-                                description = {article.description}
-                                url = {article.url}
-                            />
-                        </div>
-                    );
-                })}
+    <div>
+
+        <div claass="tabs--section">
+            <div class="wrapper">
+                <nav class="tabs">
+                    <div class="selector"></div>
+                    <a href="#" data-tab-target="#All"  class="active"><i class="fab fa-superpowers"></i>All</a>
+                    <a href="#" data-tab-target="#India"><i class="fas fa-hand-rock"></i>India</a>
+                    <a href="#" data-tab-target="#USA"><i class="fas fa-bolt"></i>USA</a>
+                    <a href="#" data-tab-target="#UK"><i class="fas fa-burn"></i>UK</a>
+                    <a href="#" data-tab-target="#Canada"><i class="fas fa-burn"></i>Canada</a>
+                </nav>
             </div>
+        </div>
+
+        <div class="tab-content">
 
             <div id="All" data-tab-content class="active-tab">
+            {console.log("All tabs")}
                 {articles.map((article) => {
                     return (
                         <div>
@@ -115,6 +88,7 @@ const StaticNewsCards = () => {
 
 
             <div id="India" data-tab-content class="">
+            {console.log("India")}
                 {articles.map((article) => {
                     return (
                         <div>
@@ -135,6 +109,7 @@ const StaticNewsCards = () => {
 
             
             <div id="USA" data-tab-content class="">
+            {console.log("USA")}
                 {articles.map((article) => {
                     return (
                         <div>
@@ -155,6 +130,8 @@ const StaticNewsCards = () => {
             
 
             <div id="UK" data-tab-content class="">
+            {console.log("UK")}
+
                 {articles.map((article) => {
                     return (
                         <div>
@@ -175,6 +152,7 @@ const StaticNewsCards = () => {
             
 
             <div id="Canada" data-tab-content class="">
+            {console.log("Canada")}
                 {articles.map((article) => {
                     return (
                         <div>
@@ -193,6 +171,7 @@ const StaticNewsCards = () => {
             </div>
 
         </div>
+    </div>
     );
 };
 
