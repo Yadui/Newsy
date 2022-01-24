@@ -1,3 +1,7 @@
+//! Can only make 50 news api req per day so change it from time to time in both ALAN and here
+//! So nothing will render if limit exceeds
+
+
 import React, { useState } from "react";
 
 
@@ -6,7 +10,7 @@ import $ from 'jquery'
 const StaticNewsCards = () => {
     const [articles, setArticles] = useState([]);
 
-    const API_KEY = "c957fa442ba64071b52a79befb5966b5";
+    const API_KEY = "c4b46fbfe276407bba595c50214a4ebc";
     let NEWS_API_URL =
     "https://newsapi.org/v2/top-headlines?country=in&apiKey=" + API_KEY;
 
