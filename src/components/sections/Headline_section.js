@@ -2,11 +2,38 @@ import React from 'react';
 
 import StaticNewsCards from './StaticNewsCards';
 
+import $ from 'jquery'
+
 const Headline_section = () => {
 
+//! ----------------------------------------------------------------------------------------------------------------------------------------
+//* TAB-NAV-BAR JS 
 
-    
 
+var tabs = $('.tabs');
+var selector = $('.tabs').find('a').length;
+var selector = $(".tabs").find(".selector");
+var activeItem = tabs.find('.active');
+var activeWidth = activeItem.innerWidth();
+
+$(".selector").css({
+    "left": activeItem.position.left + "px", 
+    "width": activeWidth + "px"
+});
+
+$(".tabs").on("click","a",function(e){
+    e.preventDefault();
+    $('.tabs a').removeClass("active");
+    $(this).addClass('active');
+    var activeWidth = $(this).innerWidth();
+    var itemPos = $(this).position();
+    $(".selector").css({
+    "left":itemPos.left + "px", 
+    "width": activeWidth + "px"
+    });
+});
+
+//! ------------------------------------------------------------------------------------------------------------------------------------
 
     return(
         <div>
@@ -24,16 +51,19 @@ const Headline_section = () => {
                             </p>
                         </div>
                         <div class="headline-container">
-                            <menu class="headline-tab-menu">
-                                <div class="tab-menu">
-                                    <div data-tab-target="#all-cards" class="menu--item active--menu">All</div>
-                                    <div data-tab-target="#india-cards" class="menu--item">India</div>
-                                    <div data-tab-target="#usa-cards" class="menu--item">USA</div>
-                                    <div data-tab-target="#uk-cards" class="menu--item">UK</div>
-                                    <div data-tab-target="#canada-cards" class="menu--item">Canada</div>
+                            <div claass="tabs--section">
+                                <div class="wrapper">
+                                    <nav class="tabs">
+                                        <div class="selector"></div>
+                                        <a href="#" data-tab-target="#All"  class="active"><i class="fab fa-superpowers"></i>All</a>
+                                        <a href="#" data-tab-target="#India"><i class="fas fa-hand-rock"></i>India</a>
+                                        <a href="#" data-tab-target="#USA"><i class="fas fa-bolt"></i>USA</a>
+                                        <a href="#" data-tab-target="#UK"><i class="fas fa-burn"></i>UK</a>
+                                        <a href="#" data-tab-target="#Canada"><i class="fas fa-burn"></i>Canada</a>
+                                    </nav>
                                 </div>
-                            </menu>
-                            <div class="headline-cards">
+                            </div>
+                            <div class="tab-content">
                                 <StaticNewsCards />
                             </div>
                         </div>
