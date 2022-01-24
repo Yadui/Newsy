@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const StaticNewsCards = () => {
     const [articles, setArticles] = useState([]);
 
-    const API_KEY = "6c0701cd55ef4880a5e369dc9a95311f";
+    const API_KEY = "c957fa442ba64071b52a79befb5966b5";
     let NEWS_API_URL =
     "https://newsapi.org/v2/top-headlines?country=in&apiKey=" + API_KEY;
 
