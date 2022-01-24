@@ -2,7 +2,7 @@
 //! So nothing will render if limit exceeds
 
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from './Card'
 
 import $ from 'jquery'
@@ -17,32 +17,37 @@ import India from "./India";
 
 const StaticNewsCards = () => {
     const [articles, setArticles] = useState([]);
+    const [countryId, setCountryId] = useState("in");
 
-    const API_KEY = "c4b46fbfe276407bba595c50214a4ebc";
-    let NEWS_API_URL =
-    "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + API_KEY;
+    useEffect(() => {
+        const API_KEY = "c4b46fbfe276407bba595c50214a4ebc";
+        let NEWS_API_URL =
+        "https://newsapi.org/v2/top-headlines?country="+ countryId +"&apiKey=" + API_KEY;
 
-    fetch(NEWS_API_URL)
-    .then((res) => res.json())
-    .then((data) => {
-        const newArticles = [];
-        // For getting entire array of news objects
-        // data.articles.map((article) => newArticles.push(article));
+        fetch(NEWS_API_URL)
+        .then((res) => res.json())
+        .then((data) => {
+            const newArticles = [];
+            // For getting entire array of news objects
+            // data.articles.map((article) => newArticles.push(article));
 
-        // For getting only 3 news object 
-        for(let i=0; i<3; i++){
-            newArticles.push(data.articles[i]);
-        }
-        setArticles(newArticles);
-        // console.log(articles);
-    })
-    .catch((error) => console.log("Error"));
-
+            // For getting only 3 news object 
+            for(let i=0; i<3; i++){
+                newArticles.push(data.articles[i]);
+            }
+            setArticles(newArticles);
+            // console.log(articles);
+        })
+        .catch((error) => console.log("Error"));
+    },[countryId])
 
 
     
-
-
+    // this is the function that will change state of country to be used in Fetch
+    // I am not able to pass parameter country instead of "us"
+    const setCountry = (country) => {
+        setCountryId("us")
+    }
 
 
 
@@ -55,11 +60,16 @@ const StaticNewsCards = () => {
             <div class="wrapper">
                 <nav class="tabs">
                     <div class="selector"></div>
-                    <a href="#" data-tab-target="#All"  class="active"><i class="fab fa-superpowers"></i>All</a>
-                    <a href="#" data-tab-target="#India"><i class="fas fa-hand-rock"></i>India</a>
-                    <a href="#" data-tab-target="#USA"><i class="fas fa-bolt"></i>USA</a>
-                    <a href="#" data-tab-target="#UK"><i class="fas fa-burn"></i>UK</a>
-                    <a href="#" data-tab-target="#Canada"><i class="fas fa-burn"></i>Canada</a>
+                    {/* Here when I click on All tab in twice then only it changes state of CountryId to "us" as written in setCountry function */}
+                    {/* the problem is that it won't change by clicking on anyother tabs */}
+                    {/* I want to change CountryId state by passing parameter eg "in" for India , "ca" for canada  */}
+                    {/* But I dont know how to pass by parameter (here "in", "ca") */}
+                    {/* I cant use setCountryId() here */}
+                    <a href="#" data-tab-target="#All"  class="active"  onClick={setCountry}><i class="fab fa-superpowers"></i>All</a>
+                    <a href="#" data-tab-target="#India"><i class="fas fa-hand-rock" onClick={setCountry}></i>India</a>
+                    <a href="#" data-tab-target="#USA"><i class="fas fa-bolt" onClick={setCountry}></i>USA</a>
+                    <a href="#" data-tab-target="#UK"><i class="fas fa-burn" onClick={setCountry}></i>UK</a>
+                    <a href="#" data-tab-target="#Canada"><i class="fas fa-burn" onClick={setCountry}></i>Canada</a>
                 </nav>
             </div>
         </div>
