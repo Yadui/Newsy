@@ -7,10 +7,17 @@ import React, { useState } from "react";
 
 import $ from 'jquery'
 
+// Dont use it extensively to avoid being exhausted and then tab-nav-bar will also not work
+//News api - c4b46fbfe276407bba595c50214a4ebc
+// Countries : in, us, ca, gb(for uk)
+// countries code : https://newsapi.org/sources
+
+
+
 const StaticNewsCards = () => {
     const [articles, setArticles] = useState([]);
 
-    const API_KEY = "c4b46fbfe276407bba595c50214a4ebc";
+    const API_KEY = "";
     let NEWS_API_URL =
     "https://newsapi.org/v2/top-headlines?country=in&apiKey=" + API_KEY;
 
