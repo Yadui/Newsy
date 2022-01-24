@@ -3,9 +3,10 @@
 
 
 import React, { useState } from "react";
-
+import Card from './Card'
 
 import $ from 'jquery'
+import India from "./India";
 
 // Dont use it extensively to avoid being exhausted and then tab-nav-bar will also not work
 //News api - c4b46fbfe276407bba595c50214a4ebc
@@ -19,7 +20,7 @@ const StaticNewsCards = () => {
 
     const API_KEY = "";
     let NEWS_API_URL =
-    "https://newsapi.org/v2/top-headlines?country=in&apiKey=" + API_KEY;
+    "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + API_KEY;
 
     fetch(NEWS_API_URL)
     .then((res) => res.json())
@@ -76,27 +77,36 @@ const StaticNewsCards = () => {
     return (
         <div>
             <div id="All" data-tab-content class="active-tab">
-            <h3>All section card</h3>
                 {articles.map((article) => {
                     return (
-                        <div class="card">
-                            <div class="card-image">
-                            {/* Need to set width here only for online pics and 100% wrt parent container */}
-                            <img src={article.urlToImage} width="100%" alt="News image" />
-                            </div>
-                            <div class="card-body">
-                                <div class="card-info">
-                                    <div class="card-date">{new Date(article.publishedAt).toDateString()}</div>
-                                    <div class="card-source">{article.source.name}</div>
-                                </div>
-                                <div class="card-title">
-                                    <h4>{article.title}</h4>
-                                </div>
-                                <div class="card-text">
-                                    <p>{article.description}</p>
-                                </div>
-                                <a href={article.url} target="_blank" class="btn card-btn">LEARN MORE</a>
-                            </div>
+                        <div>
+                            <Card 
+                                tab = "All"
+                                urlToImage = {article.urlToImage}
+                                publisedAt = {article.publishedAt}
+                                srcName = {article.source.name}
+                                title = {article.title}
+                                description = {article.description}
+                                url = {article.url}
+                            />
+                        </div>
+                    );
+                })}
+            </div>
+
+            <div id="All" data-tab-content class="active-tab">
+                {articles.map((article) => {
+                    return (
+                        <div>
+                            <Card 
+                                tab = "All"
+                                urlToImage = {article.urlToImage}
+                                publisedAt = {article.publishedAt}
+                                srcName = {article.source.name}
+                                title = {article.title}
+                                description = {article.description}
+                                url = {article.url}
+                            />
                         </div>
                     );
                 })}
@@ -104,30 +114,19 @@ const StaticNewsCards = () => {
 
 
 
-
-
             <div id="India" data-tab-content class="">
-            <h3>India card</h3>
                 {articles.map((article) => {
                     return (
-                        <div class="card">
-                            <div class="card-image">
-                            {/* Need to set width here only for online pics and 100% wrt parent container */}
-                            <img src={article.urlToImage} width="100%" alt="News image" />
-                            </div>
-                            <div class="card-body">
-                                <div class="card-info">
-                                    <div class="card-date">{new Date(article.publishedAt).toDateString()}</div>
-                                    <div class="card-source">{article.source.name}</div>
-                                </div>
-                                <div class="card-title">
-                                    <h4>{article.title}</h4>
-                                </div>
-                                <div class="card-text">
-                                    <p>{article.description}</p>
-                                </div>
-                                <a href={article.url} target="_blank" class="btn card-btn">LEARN MORE</a>
-                            </div>
+                        <div>
+                            <Card 
+                                tab = "India"
+                                urlToImage = {article.urlToImage}
+                                publisedAt = {article.publishedAt}
+                                srcName = {article.source.name}
+                                title = {article.title}
+                                description = {article.description}
+                                url = {article.url}
+                            />
                         </div>
                     );
                 })}
@@ -136,27 +135,18 @@ const StaticNewsCards = () => {
 
             
             <div id="USA" data-tab-content class="">
-            <h3>USA card</h3>
                 {articles.map((article) => {
                     return (
-                        <div class="card">
-                            <div class="card-image">
-                            {/* Need to set width here only for online pics and 100% wrt parent container */}
-                            <img src={article.urlToImage} width="100%" alt="News image" />
-                            </div>
-                            <div class="card-body">
-                                <div class="card-info">
-                                    <div class="card-date">{new Date(article.publishedAt).toDateString()}</div>
-                                    <div class="card-source">{article.source.name}</div>
-                                </div>
-                                <div class="card-title">
-                                    <h4>{article.title}</h4>
-                                </div>
-                                <div class="card-text">
-                                    <p>{article.description}</p>
-                                </div>
-                                <a href={article.url} target="_blank" class="btn card-btn">LEARN MORE</a>
-                            </div>
+                        <div>
+                            <Card 
+                                tab = "USA"
+                                urlToImage = {article.urlToImage}
+                                publisedAt = {article.publishedAt}
+                                srcName = {article.source.name}
+                                title = {article.title}
+                                description = {article.description}
+                                url = {article.url}
+                            />
                         </div>
                     );
                 })}
@@ -165,27 +155,18 @@ const StaticNewsCards = () => {
             
 
             <div id="UK" data-tab-content class="">
-            <h3>UK card</h3>
                 {articles.map((article) => {
                     return (
-                        <div class="card">
-                            <div class="card-image">
-                            {/* Need to set width here only for online pics and 100% wrt parent container */}
-                            <img src={article.urlToImage} width="100%" alt="News image" />
-                            </div>
-                            <div class="card-body">
-                                <div class="card-info">
-                                    <div class="card-date">{new Date(article.publishedAt).toDateString()}</div>
-                                    <div class="card-source">{article.source.name}</div>
-                                </div>
-                                <div class="card-title">
-                                    <h4>{article.title}</h4>
-                                </div>
-                                <div class="card-text">
-                                    <p>{article.description}</p>
-                                </div>
-                                <a href={article.url} target="_blank" class="btn card-btn">LEARN MORE</a>
-                            </div>
+                        <div>
+                            <Card 
+                                tab = "UK"
+                                urlToImage = {article.urlToImage}
+                                publisedAt = {article.publishedAt}
+                                srcName = {article.source.name}
+                                title = {article.title}
+                                description = {article.description}
+                                url = {article.url}
+                            />
                         </div>
                     );
                 })}
@@ -194,27 +175,18 @@ const StaticNewsCards = () => {
             
 
             <div id="Canada" data-tab-content class="">
-            <h3>Canada card</h3>
                 {articles.map((article) => {
                     return (
-                        <div class="card">
-                            <div class="card-image">
-                            {/* Need to set width here only for online pics and 100% wrt parent container */}
-                            <img src={article.urlToImage} width="100%" alt="News image" />
-                            </div>
-                            <div class="card-body">
-                                <div class="card-info">
-                                    <div class="card-date">{new Date(article.publishedAt).toDateString()}</div>
-                                    <div class="card-source">{article.source.name}</div>
-                                </div>
-                                <div class="card-title">
-                                    <h4>{article.title}</h4>
-                                </div>
-                                <div class="card-text">
-                                    <p>{article.description}</p>
-                                </div>
-                                <a href={article.url} target="_blank" class="btn card-btn">LEARN MORE</a>
-                            </div>
+                        <div>
+                            <Card 
+                                tab = "Canada"
+                                urlToImage = {article.urlToImage}
+                                publisedAt = {article.publishedAt}
+                                srcName = {article.source.name}
+                                title = {article.title}
+                                description = {article.description}
+                                url = {article.url}
+                            />
                         </div>
                     );
                 })}
