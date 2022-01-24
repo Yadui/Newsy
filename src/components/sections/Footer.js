@@ -52,7 +52,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div class="copyright">
-                        <p>Copyright © 2021 YouGov PLC. All Rights Reserved.</p>
+                        <p>Copyright © 2021 Newsy PLC. All Rights Reserved.</p>
                     </div>
                 </div>
             </footer>
