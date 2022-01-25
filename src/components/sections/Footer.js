@@ -6,6 +6,8 @@ import fb_logo from '../../images/facebook.png'
 import twitter_logo from '../../images/twitter.png'
 import linkedin_logo from '../../images/linkedin.png'
 
+import "./Footer.css"
+
 const Footer = () => {
     return(
         <div>

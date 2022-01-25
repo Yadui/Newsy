@@ -8,7 +8,7 @@ import Hero_section from '../sections/Hero_section'
 import Headline_section from '../sections/Headline_section'
 import Information from '../sections/Information'
 import Footer from '../sections/Footer'
-
+import Carousel from '../sections/Carousel'
 
 
 
@@ -21,6 +21,7 @@ const NewsCards = ({ articles, activeArticle }) => {
                 <Hero_section />
                 <Information />
                 <Headline_section />
+                {/* <Carousel /> */}
                 <Footer />
             </div>
         )
@@ -40,6 +41,7 @@ const NewsCards = ({ articles, activeArticle }) => {
                     ))}
                 </Grid>            
             </Grow>
+            {/* <Carousel /> */}
             <Footer />
         </div>
     );

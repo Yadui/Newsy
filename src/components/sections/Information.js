@@ -4,6 +4,8 @@ import category_logo from '../../images/category.png';
 import term_logo from '../../images/business.png';
 import source_logo from '../../images/news.png'
 
+import "./Information.css"
+
 const Information = () => {
     return(
         <div>

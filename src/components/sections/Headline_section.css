@@ -1,0 +1,65 @@
+
+
+/* Headline section  */
+    
+.headline-section{
+    padding-bottom: 200px;
+    padding-top: 100px;
+
+}
+/* .headline-section-container {
+} */
+.headline-header{
+    margin-bottom: 80px;
+}
+/* .headline-center{ */
+    /* ! this is to bee seen later for extra centring */
+    /* margin-left: 5%; */
+    /* margin-right: 5%; */
+/* } */
+.headline-header h2{
+    margin-bottom: 48px;
+}  
+.headline-header p{
+    font-size:20px;
+    line-height: 1.4;
+}
+/* .headline-container{
+    
+} */
+
+.headline-tab-menu{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+    /* Media Query for Mobile Devices */
+    @media  screen and (max-width: 480px) {
+
+    }
+    
+    /* Media Query for low resolution  Tablets, Ipads */
+    /*! To be dealt most  */
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        .tab-menu{
+            width:70%;
+        }
+    }
+    
+    /* Media Query for Tablets Ipads portrait mode */
+    @media screen and (min-width: 768px) and (max-width: 1024px){
+
+    }
+    
+    /* Media Query for Laptops and Desktops */
+    @media screen and (min-width: 1025px) and (max-width: 1280px){
+    
+    }
+    
+    /* Media Query for Large screens */
+    @media screen and (min-width: 1281px) {
+    
+    }

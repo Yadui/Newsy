@@ -1,0 +1,145 @@
+
+
+/* Footer section */
+    /*Spacing : 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+    
+    
+    .footer{
+        background-color: #f1f1fb;
+        /* height:50vh; */
+        padding: 100px
+    }
+    
+    .footer-container{
+        
+    }
+    .footer-container h3{
+        padding-bottom: 32px;
+        border-bottom: 0.1px solid #d9d9e2;
+        margin-bottom: 32px;
+    }
+    .footer-container p{
+    
+    }
+    .footer-share-quote{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+    
+    .footer-info{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr ;
+        justify-content: space-between;
+        column-gap:20px;
+        row-gap: 80px;
+        margin-bottom: 48px;
+    
+        flex-wrap: wrap;
+    }
+    
+    
+    .footer h4{
+        color:#97949e;
+    }
+    .footer p{
+        color: #acaab5;
+    }
+    
+    
+    .footer-info h4{
+        margin-bottom: 20px;
+    }
+    .footer-info p{
+        line-height: 1.5;
+    }
+    .footer-developer{
+        
+    }
+    .footer-share{
+        
+    }
+    
+    .footer-share-quote{
+    }
+    
+    .footer-logo-flex-container{
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer-logos{
+        display: flex;
+        
+        flex-wrap:wrap;
+        gap:20px;
+    }
+    
+    
+    
+    .footer--logo{
+        background-color: #d9d9e2;
+        border-radius: 5000px;
+        width:32px;
+        height:32px;
+    
+    }
+    
+    .footer--logo:hover{
+        background-color: #3a344a;
+    }
+    
+    .footer-logos a{
+    }
+    .footer-logos img{
+        width: 32px;
+        height:32px;
+    }
+    
+    .footer-about{
+        /* width:20%; */
+    }
+    
+    
+    .copyright{
+        padding-top: 48px;
+        border-top: 0.1px solid #d9d9e2;
+        color:#d7d4e2;
+        display: flex;
+        justify-content: center;
+        
+    
+    }
+    .copyright p{
+        
+    }
+
+
+    @media  screen and (max-width: 480px) {
+        .footer-info{
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+    }
+    
+    /* Media Query for low resolution  Tablets, Ipads */
+    /*! To be dealt most  */
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        .footer-info{
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+    }
+    
+    /* Media Query for Tablets Ipads portrait mode */
+    @media screen and (min-width: 768px) and (max-width: 1024px){
+
+    }
+    
+    /* Media Query for Laptops and Desktops */
+    @media screen and (min-width: 1025px) and (max-width: 1280px){
+    
+    }
+    
+    /* Media Query for Large screens */
+    @media screen and (min-width: 1281px) {
+    
+    }

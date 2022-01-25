@@ -4,6 +4,8 @@ import StaticNewsCards from './StaticNewsCards';
 
 import $ from 'jquery'
 
+import "./Headline_section.css"
+
 const Headline_section = () => {
 
 //! ----------------------------------------------------------------------------------------------------------------------------------------

@@ -1,4 +1,6 @@
 import React from 'react';
+import "./Hero_section.css"
+
 
 const Hero_section = () => {
     return(

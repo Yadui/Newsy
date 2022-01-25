@@ -5,17 +5,19 @@ import React, { useState, useEffect } from "react";
 import Card from "./Card";
 
 import CountryTab from "./CountryTab";
+import "./StaticNewsCards.css"
 // Dont use it extensively to avoid being exhausted and then tab-nav-bar will also not work
-//News api - c4b46fbfe276407bba595c50214a4ebc
+//News api - 3926050692334762bc87904d7cccc8f3
 // Countries : in, us, ca, gb(for uk)
 // countries code : https://newsapi.org/sources
 
 const StaticNewsCards = () => {
     const [articles, setArticles] = useState([]);
     const [countryId, setCountryId] = useState("kr");
+    const [isLoading, setLoading] = useState(true)
 
     useEffect(() => {
-    const API_KEY = "c4b46fbfe276407bba595c50214a4ebc";
+    const API_KEY = "3926050692334762bc87904d7cccc8f3";
     let NEWS_API_URL =
         "https://newsapi.org/v2/top-headlines?country=" +
         countryId +
@@ -26,15 +28,16 @@ const StaticNewsCards = () => {
         .then((res) => res.json())
         .then((data) => {
         const newArticles = [];
-        // For getting entire array of news objects
-        // data.articles.map((article) => newArticles.push(article));
+            // For getting entire array of news objects
+            // data.articles.map((article) => newArticles.push(article));
 
-        // For getting only 3 news object
-        for (let i = 0; i < 3; i++) {
-            newArticles.push(data.articles[i]);
-        }
-        setArticles(newArticles);
-        // console.log(articles);
+            // For getting only 3 news object
+            for (let i = 0; i < 3; i++) {
+                newArticles.push(data.articles[i]);
+            }
+            setArticles(newArticles);
+            // console.log(articles);
+            setLoading(false)
         })
         .catch((error) => console.log("Error"));
     }, [countryId]);
@@ -44,7 +47,6 @@ const StaticNewsCards = () => {
         setCountryId(country.toString());
     };
 
-    console.log(articles)
 
     return (
         <div>

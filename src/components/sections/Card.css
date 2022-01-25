@@ -1,0 +1,89 @@
+
+
+.card{
+    height:85vh;
+    /* padding:50px 20px; */
+    border: 1px solid #c6c6c9;
+  height:95vh;      
+}
+.card:hover{
+    border:none;
+    box-shadow: 0 0 32px 0 rgba(0,0,0,0.1);
+}
+
+
+/* .card-image{
+  
+}
+.card-image img{
+
+} */
+.card-body{
+  padding: 40px 20px;
+}
+.card-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 64px;
+  color:#928e9b;
+}
+/* 24 32 48 64 */
+/* .card-date{
+
+}
+.card-source{
+
+}
+.card-title{
+
+} */
+.card-title h4{
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 32px;
+}
+/* .card-text{
+
+} */
+.card-text p{
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #928e9b;
+}
+.card-btn{
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0;
+}
+    /* Media Query for Mobile Devices */
+    @media  screen and (max-width: 480px) {
+
+    }
+    
+    /* Media Query for low resolution  Tablets, Ipads */
+    /*! To be dealt most  */
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+
+        .inst-cards, .all-cards{
+        grid-template-columns: 80%;
+        justify-content: center;
+        }
+
+    }
+    
+    /* Media Query for Tablets Ipads portrait mode */
+    @media screen and (min-width: 768px) and (max-width: 1024px){
+
+    }
+    
+    /* Media Query for Laptops and Desktops */
+    @media screen and (min-width: 1025px) and (max-width: 1280px){
+    
+    }
+    
+    /* Media Query for Large screens */
+    @media screen and (min-width: 1281px) {
+    
+    }
