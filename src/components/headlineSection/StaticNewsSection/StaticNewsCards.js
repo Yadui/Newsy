@@ -2,9 +2,9 @@
 //! So nothing will render if limit exceeds
 
 import React, { useState, useEffect } from "react";
-import Card from "../../sections/Card";
+import Card from "../../Cards/Card"
 
-import CountryTab from "../../sections/CountryTab";
+import CountryTab from "../../Cards/CountryTab";
 import "./StaticNewsCards.css"
 // Dont use it extensively to avoid being exhausted and then tab-nav-bar will also not work
 //News api - 3926050692334762bc87904d7cccc8f3
