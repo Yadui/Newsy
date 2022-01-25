@@ -6,8 +6,10 @@ import Card from "../../Cards/Card"
 
 import CountryTab from "../../Cards/CountryTab";
 import "./StaticNewsCards.css"
+
+import SkeletonElement from "../../Cards/SkeletonElement";
 // Dont use it extensively to avoid being exhausted and then tab-nav-bar will also not work
-//News api - 3926050692334762bc87904d7cccc8f3
+//News api - b60a32a06ad349b4ab967f476c873ffe
 // Countries : in, us, ca, gb(for uk)
 // countries code : https://newsapi.org/sources
 
@@ -20,7 +22,7 @@ const StaticNewsCards = () => {
     // Everytime we fetch data we set loading to true
     setLoading(true)
 
-    const API_KEY = "3926050692334762bc87904d7cccc8f3";
+    const API_KEY = "b60a32a06ad349b4ab967f476c873ffe";
     let NEWS_API_URL =
         "https://newsapi.org/v2/top-headlines?country=" +
         countryId +
@@ -103,7 +105,18 @@ const StaticNewsCards = () => {
 
             <div className="tab-content">
 
-            {isLoading && <div>Loading data, grab a cup of coffee</div> }
+            {isLoading && (
+                <div>
+                    <div id="All" data-tab-content className="active-tab">
+                        <SkeletonElement/>
+                        <SkeletonElement/>
+                        <SkeletonElement/>
+                        <SkeletonElement/>
+                        <SkeletonElement/>
+                        <SkeletonElement/>
+                    </div>
+                </div> 
+            )}
             {isLoading || (
                 <div>
                     <div id="All" data-tab-content className="active-tab">
