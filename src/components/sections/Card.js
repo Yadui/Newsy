@@ -6,11 +6,11 @@ const Card = (props) => {
             <div className="card">
                 <div className="card-image">
                 {/* Need to set width here only for online pics and 100% wrt parent container */}
-                <img src={props.urlToImage} width="100%" alt="News image" />
+                <img src={props.urlToImage || 'https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png'} width="100%" alt="News image" />
                 </div>
                 <div className="card-body">
                     <div className="card-info">
-                        <div className="card-date">{new Date(props.publishedAt).toDateString()}</div>
+                        <div className="card-date">{(new Date(props.publishedAt)).toDateString()}</div>
                         <div className="card-source">{props.srcName}</div>
                     </div>
                     <div className="card-title">

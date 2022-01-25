@@ -12,7 +12,7 @@ const CountryTab = (props) => {
                         <div>
                             <Card
                                 urlToImage={article.urlToImage}
-                                publisedAt={article.publishedAt}
+                                publishedAt={article.publishedAt}
                                 srcName={article.source.name}
                                 title={article.title}
                                 description={article.description}

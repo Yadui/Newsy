@@ -15,7 +15,7 @@ const StaticNewsCards = () => {
     const [countryId, setCountryId] = useState("kr");
 
     useEffect(() => {
-    const API_KEY = "";
+    const API_KEY = "c4b46fbfe276407bba595c50214a4ebc";
     let NEWS_API_URL =
         "https://newsapi.org/v2/top-headlines?country=" +
         countryId +
@@ -43,6 +43,8 @@ const StaticNewsCards = () => {
     const setCountry = (country) => {
         setCountryId(country.toString());
     };
+
+    console.log(articles)
 
     return (
         <div>
@@ -102,7 +104,7 @@ const StaticNewsCards = () => {
                                 <Card
                                     tab="All"
                                     urlToImage={article.urlToImage}
-                                    publisedAt={article.publishedAt}
+                                    publishedAt={article.publishedAt}
                                     srcName={article.source.name}
                                     title={article.title}
                                     description={article.description}
