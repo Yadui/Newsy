@@ -15,7 +15,7 @@ const StaticNewsCards = () => {
     const [countryId, setCountryId] = useState("in");
 
     useEffect(() => {
-    const API_KEY = "c4b46fbfe276407bba595c50214a4ebc";
+    const API_KEY = "";
     let NEWS_API_URL =
         "https://newsapi.org/v2/top-headlines?country=" +
         countryId +
@@ -48,24 +48,24 @@ const StaticNewsCards = () => {
     return (
         <div>
             <div claass="tabs--section">
-                <div class="wrapper">
-                    <nav class="tabs">
-                        <div class="selector"></div>
+                <div className="wrapper">
+                    <nav className="tabs">
+                        <div className="selector"></div>
 
                             <a
                                 href="#"
                                 data-tab-target="#All"
-                                class="active"
+                                className="active"
                                 onClick={() => setCountry("in")}
                             >
-                                <i class="fab fa-superpowers"></i>All
+                                <i className="fab fa-superpowers"></i>All
                             </a>
                             <a
                                 href="#"
                                 data-tab-target="#India"
                                 onClick={() => setCountry("in")}
                             >
-                                <i class="fas fa-hand-rock"></i>
+                                <i className="fas fa-hand-rock"></i>
                                 India
                             </a>
                             <a 
@@ -73,29 +73,29 @@ const StaticNewsCards = () => {
                                 data-tab-target="#USA" 
                                 onClick={() => setCountry("us")}
                             >
-                                <i class="fas fa-bolt"></i>USA
+                                <i className="fas fa-bolt"></i>USA
                             </a>
                             <a 
                                 href="#"
                                 data-tab-target="#UK"
                                 onClick={() => setCountry("gb")}
                             >
-                                <i class="fas fa-burn"></i>UK
+                                <i className="fas fa-burn"></i>UK
                             </a>
                             <a
                                 href="#"
                                 data-tab-target="#Canada"
                                 onClick={() => setCountry("ca")}
                             >
-                                <i class="fas fa-burn"></i>Canada
+                                <i className="fas fa-burn"></i>Canada
                             </a>
                     </nav>
                 </div>
             </div>
 
-            <div class="tab-content">
+            <div className="tab-content">
 
-                <div id="All" data-tab-content class="active-tab">
+                <div id="All" data-tab-content className="active-tab">
                     {articles.map((article) => {
                         return (
                             <div>
@@ -113,7 +113,7 @@ const StaticNewsCards = () => {
                     })}
                 </div>
             
-                <div id="India" data-tab-content class="">
+                <div id="India" data-tab-content className="">
                     {articles.map((article) => {
                         return (
                             <div>
@@ -131,7 +131,7 @@ const StaticNewsCards = () => {
                     })}
                 </div>
             
-                <div id="USA" data-tab-content class="">
+                <div id="USA" data-tab-content className="">
                     {articles.map((article) => {
                         return (
                             <div>
@@ -149,7 +149,7 @@ const StaticNewsCards = () => {
                     })}
                 </div>
             
-                <div id="UK" data-tab-content class="">
+                <div id="UK" data-tab-content className="">
                     {articles.map((article) => {
                         return (
                             <div>
@@ -167,7 +167,7 @@ const StaticNewsCards = () => {
                     })}
                 </div>
             
-                <div id="Canada" data-tab-content class="">
+                <div id="Canada" data-tab-content className="">
                     {articles.map((article) => {
                         return (
                             <div>

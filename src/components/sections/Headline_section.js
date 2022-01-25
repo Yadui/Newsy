@@ -65,11 +65,11 @@ tabs2.forEach((tab) => {
 
     return(
         <div>
-            <div class="headline-section">
-                <div class="container-center">
+            <div className="headline-section">
+                <div className="container-center">
                     <div>
-                        <div class="headline-section-container">
-                            <div class="headline-header headline-center">
+                        <div className="headline-section-container">
+                            <div className="headline-header headline-center">
                             <h2>Unrivalled intelligence on the Technology sector</h2>
                             <p>
                                 Leveraging our proprietary panel of 15 million people worldwide, YouGov 
@@ -78,7 +78,7 @@ tabs2.forEach((tab) => {
                                 contact us to dig much, much deeper.
                             </p>
                         </div>
-                        <div class="headline-container">
+                        <div className="headline-container">
                             
                                 <StaticNewsCards />
                         </div>
