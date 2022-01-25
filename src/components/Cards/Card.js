@@ -3,17 +3,25 @@ import React from 'react';
 import "./Card.css"
 
 const Card = (props) => {
+    const goTo = (url) => {
+        // e.preventDefault()
+        {/* eslint-disable-next-line no-restricted-globals */}
+        location = url
+    }
+
     return(
         <div>
             <div className="card">
                 <div className="card-image">
                 {/* Need to set width here only for online pics and 100% wrt parent container */}
-                <img 
-                    src={props.urlToImage || 'https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png'} 
-                    width="100%" 
-                    height="250px"
-                    alt="News image" 
-                />
+                <a href={props.url} target="_blank">
+                    <img 
+                        src={props.urlToImage || 'https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png'} 
+                        width="100%" 
+                        height="250px"
+                        alt="News image" 
+                    />
+                </a>
                 </div>
                 <div className="card-body">
                     <div className="card-info">

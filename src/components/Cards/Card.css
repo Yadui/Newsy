@@ -5,19 +5,22 @@
     /* padding:50px 20px; */
     border: 1px solid #c6c6c9;
   height:95vh;      
+  overflow: hidden;
 }
 .card:hover{
     border:none;
     box-shadow: 0 0 32px 0 rgba(0,0,0,0.1);
+    border-bottom: 10px solid #22289a
+
 }
 
 
 /* .card-image{
   
-}
-.card-image img{
-
 } */
+.card-image img:hover{
+    cursor: pointer;
+}
 .card-body{
   padding: 40px 20px;
 }
