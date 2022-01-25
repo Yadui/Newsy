@@ -8,8 +8,7 @@ import Hero_section from '../heroSection/Hero_section'
 import Headline_section from '../headlineSection/Headline_section'
 import Information from '../informationSection/Information'
 import Footer from '../footerSection/Footer'
-import Carousel from '../Cards/Carousel'
-
+import Caraousel from '../AboutSection/Caraousel.js';
 
 
 const NewsCards = ({ articles, activeArticle }) => {
@@ -21,7 +20,6 @@ const NewsCards = ({ articles, activeArticle }) => {
                 <Hero_section />
                 <Information />
                 <Headline_section />
-                {/* <Carousel /> */}
                 <Footer />
             </div>
         )
@@ -41,7 +39,6 @@ const NewsCards = ({ articles, activeArticle }) => {
                     ))}
                 </Grid>            
             </Grow>
-            {/* <Carousel /> */}
             <Footer />
         </div>
     );
