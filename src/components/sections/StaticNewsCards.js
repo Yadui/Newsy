@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "./Card";
 
-
+import CountryTab from "./CountryTab";
 // Dont use it extensively to avoid being exhausted and then tab-nav-bar will also not work
 //News api - c4b46fbfe276407bba595c50214a4ebc
 // Countries : in, us, ca, gb(for uk)
@@ -12,7 +12,7 @@ import Card from "./Card";
 
 const StaticNewsCards = () => {
     const [articles, setArticles] = useState([]);
-    const [countryId, setCountryId] = useState("in");
+    const [countryId, setCountryId] = useState("kr");
 
     useEffect(() => {
     const API_KEY = "";
@@ -39,8 +39,7 @@ const StaticNewsCards = () => {
         .catch((error) => console.log("Error"));
     }, [countryId]);
 
-  // this is the function that will change state of country to be used in Fetch
-  // I am not able to pass parameter country instead of "us"
+
     const setCountry = (country) => {
         setCountryId(country.toString());
     };
@@ -56,7 +55,7 @@ const StaticNewsCards = () => {
                                 href="#"
                                 data-tab-target="#All"
                                 className="active"
-                                onClick={() => setCountry("in")}
+                                onClick={() => setCountry("kr")}
                             >
                                 <i className="fab fa-superpowers"></i>All
                             </a>
@@ -93,8 +92,9 @@ const StaticNewsCards = () => {
                 </div>
             </div>
 
-            <div className="tab-content">
 
+
+            <div className="tab-content">
                 <div id="All" data-tab-content className="active-tab">
                     {articles.map((article) => {
                         return (
@@ -113,77 +113,24 @@ const StaticNewsCards = () => {
                     })}
                 </div>
             
-                <div id="India" data-tab-content className="">
-                    {articles.map((article) => {
-                        return (
-                            <div>
-                                <Card
-                                tab="India"
-                                urlToImage={article.urlToImage}
-                                publisedAt={article.publishedAt}
-                                srcName={article.source.name}
-                                title={article.title}
-                                description={article.description}
-                                url={article.url}
-                            />
-                            </div>
-                        );
-                    })}
-                </div>
+                <CountryTab 
+                    countryId = "India"
+                    articles = {articles}
+                />
             
-                <div id="USA" data-tab-content className="">
-                    {articles.map((article) => {
-                        return (
-                            <div>
-                                <Card
-                                    tab="USA"
-                                    urlToImage={article.urlToImage}
-                                    publisedAt={article.publishedAt}
-                                    srcName={article.source.name}
-                                    title={article.title}
-                                    description={article.description}
-                                    url={article.url}
-                                />
-                            </div>
-                        );
-                    })}
-                </div>
-            
-                <div id="UK" data-tab-content className="">
-                    {articles.map((article) => {
-                        return (
-                            <div>
-                                <Card
-                                    tab="UK"
-                                    urlToImage={article.urlToImage}
-                                    publisedAt={article.publishedAt}
-                                    srcName={article.source.name}
-                                    title={article.title}
-                                    description={article.description}
-                                    url={article.url}
-                                />
-                            </div>
-                        );
-                    })}
-                </div>
-            
-                <div id="Canada" data-tab-content className="">
-                    {articles.map((article) => {
-                        return (
-                            <div>
-                                <Card
-                                    tab="Canada"
-                                    urlToImage={article.urlToImage}
-                                    publisedAt={article.publishedAt}
-                                    srcName={article.source.name}
-                                    title={article.title}
-                                    description={article.description}
-                                    url={article.url}
-                                />
-                                </div>
-                        );
-                    })}
-                </div>
+                <CountryTab
+                    countryId = "USA"
+                    articles = {articles}
+                />
+                <CountryTab
+                    countryId = "UK"
+                    articles = {articles}
+                />
+                <CountryTab
+                    countryId = "Canada"
+                    articles = {articles}
+                />
+
             </div>
         </div>
     );

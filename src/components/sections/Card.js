@@ -3,7 +3,6 @@ import React from 'react';
 const Card = (props) => {
     return(
         <div>
-            <h4>{props.tab}</h4>
             <div className="card">
                 <div className="card-image">
                 {/* Need to set width here only for online pics and 100% wrt parent container */}
