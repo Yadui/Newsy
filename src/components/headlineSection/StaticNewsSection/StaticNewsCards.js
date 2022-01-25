@@ -17,6 +17,9 @@ const StaticNewsCards = () => {
     const [isLoading, setLoading] = useState(true)
 
     useEffect(() => {
+    // Everytime we fetch data we set loading to true
+    setLoading(true)
+
     const API_KEY = "3926050692334762bc87904d7cccc8f3";
     let NEWS_API_URL =
         "https://newsapi.org/v2/top-headlines?country=" +
@@ -32,7 +35,7 @@ const StaticNewsCards = () => {
             // data.articles.map((article) => newArticles.push(article));
 
             // For getting only 3 news object
-            for (let i = 0; i < 3; i++) {
+            for (let i = 0; i < 6; i++) {
                 newArticles.push(data.articles[i]);
             }
             setArticles(newArticles);
@@ -100,43 +103,49 @@ const StaticNewsCards = () => {
 
             <div className="tab-content">
 
-                <div id="All" data-tab-content className="active-tab">
-                    {articles.map((article) => {
-                        return (
-                            <div>
-                                <Card
-                                    tab="All"
-                                    urlToImage={article.urlToImage || 'https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png'}
-                                    publishedAt={article.publishedAt}
-                                    srcName={article.source.name}
-                                    title={article.title}
-                                    description={article.description}
-                                    url={article.url}
-                                />
-                            </div>
-                        );
-                    })}
-                </div>
-            
-                <CountryTab 
-                    countryId = "India"
-                    articles = {articles}
-                />
-            
-                <CountryTab
-                    countryId = "USA"
-                    articles = {articles}
-                />
-                <CountryTab
-                    countryId = "UK"
-                    articles = {articles}
-                />
-                <CountryTab
-                    countryId = "Canada"
-                    articles = {articles}
-                />
+            {isLoading && <div>Loading data, grab a cup of coffee</div> }
+            {isLoading || (
+                <div>
+                    <div id="All" data-tab-content className="active-tab">
+                        {articles.map((article) => {
+                            return (
+                                <div>
+                                    <Card
+                                        tab="All"
+                                        urlToImage={article.urlToImage || 'https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png'}
+                                        publishedAt={article.publishedAt}
+                                        srcName={article.source.name}
+                                        title={article.title}
+                                        description={article.description}
+                                        url={article.url}
+                                    />
+                                </div>
+                            );
+                        })}
+                    </div>
+                    
+                    <CountryTab 
+                        countryId = "India"
+                        articles = {articles}
+                    />
 
+                    <CountryTab
+                        countryId = "USA"
+                        articles = {articles}
+                    />
+                    <CountryTab
+                        countryId = "UK"
+                        articles = {articles}
+                    />
+                    <CountryTab
+                        countryId = "Canada"
+                        articles = {articles}
+                    />
+
+                </div>
+            )}
             </div>
+
         </div>
     );
 };
