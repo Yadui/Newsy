@@ -1,6 +1,6 @@
 import React from 'react';
 
-import StaticNewsCards from './StaticNewsCards';
+import StaticNewsCards from './StaticNewsSection/StaticNewsCards';
 
 import $ from 'jquery'
 

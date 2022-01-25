@@ -4,11 +4,11 @@ import { Grid, Grow, Typography } from '@material-ui/core';
 import useStyles from './styles.js';
 import NewsCard from '../NewsCard/NewsCard';
 
-import Hero_section from '../sections/Hero_section'
-import Headline_section from '../sections/Headline_section'
-import Information from '../sections/Information'
-import Footer from '../sections/Footer'
-import Carousel from '../sections/Carousel'
+import Hero_section from '../heroSection/Hero_section'
+import Headline_section from '../headlineSection/Headline_section'
+import Information from '../informationSection/Information'
+import Footer from '../footerSection/Footer'
+import Carousel from '../Cards/Carousel'
 
 
 
