@@ -97,13 +97,14 @@ const StaticNewsCards = () => {
 
 
             <div className="tab-content">
+
                 <div id="All" data-tab-content className="active-tab">
                     {articles.map((article) => {
                         return (
                             <div>
                                 <Card
                                     tab="All"
-                                    urlToImage={article.urlToImage}
+                                    urlToImage={article.urlToImage || 'https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png'}
                                     publishedAt={article.publishedAt}
                                     srcName={article.source.name}
                                     title={article.title}
