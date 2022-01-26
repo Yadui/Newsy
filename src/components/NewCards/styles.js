@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles({
     container: {
-        padding: '10% 5%',
+        padding: '2% 5% 10% 5%',
         width: '100%',
         margin: 0,
     },
@@ -23,5 +23,6 @@ export default makeStyles({
         display: 'flex',
         flexDirection: 'column',
         textAlign: 'center'
-    }
+    },
+    
 });
