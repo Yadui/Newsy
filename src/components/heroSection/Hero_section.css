@@ -16,13 +16,6 @@
 
 }
 
-.header{
-    /* position: relative; */
-    /* padding-top: 30px; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 .header-nav{
     width: 90vw;
@@ -40,10 +33,10 @@
     border-top:1px solid rgba(255,255,255,0.5);
     border-left:1px solid rgba(255,255,255,0.5);
     border-radius: 10px;
-
+    
     position: fixed;
-
-
+    
+    
     flex-wrap: wrap;
 }
 .logo{ 
@@ -58,7 +51,7 @@
     gap:20px;
     width:40%;
     font-size: 20px;
-
+    
 }
 .navigation{
     cursor: pointer;
@@ -95,25 +88,31 @@
     left:50%;
     transform: translate(-50%, -80%);
 } */
+.header{
+    /* position: relative; */
+    /* padding-top: 30px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .header-container {
-
+    
     
 }
 .header-container-inner{
     width:40vw;
-
+    
     /*! This is deleted to be seen later for extra centring */
     /* margin-left: 5%; */
-
-
+    
+    
     /* margin:100px */
 }
 .header-info{
-
 }
 
 .hero-section h1{
-    
+    font-size: 62px;
     letter-spacing: -0.5px;
     line-height: 1.1;
     margin-bottom: 3rem;
@@ -127,10 +126,10 @@
 }
 
 .hero--btns{
-    width:80%;
+    width:100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap:50px;
 }
 .hero-section .btn{
 
@@ -151,13 +150,16 @@
     background-color: #33b8b4;
 }
 
+    /* Media Query for Mobile Devices */
+    @media  screen and (max-width: 481px) {
 
+    }
     /* Media Query for low resolution  Tablets, Ipads */
     /*! To be dealt most  */
     @media screen and (min-width: 481px) and (max-width: 767px) {
     
         .background-container{
-            background-position-x: 60%;
+            background-position-x: 70%;
         }
     
         .navigations {
@@ -175,6 +177,28 @@
         .navigation-res a{
     
         }
+        .header-info{
+            width: 60%;
+        }
+        .hero-section h1{
+            font-size: 36px;
+
+        }
+        
+        .hero-section p{
+            font-size:20px;
+
+        }
+        
+        .hero--btns{
+            width:100%;
+            gap:15px;
+        }
+        .large--btn{
+            padding: 9px;
+            font-size: 16px;
+            font-weight: 700;
+        }
     }
     
     /* Media Query for Tablets Ipads portrait mode */
@@ -182,11 +206,43 @@
         .background-container{
             background-position-x: 70%;
         }
+
+        .header-info{
+            width: 60%;
+        }
+        .hero-section h1{
+            font-size: 40px;
+
+        }
+        
+        .hero-section p{
+            font-size:22px;
+        }
+        .hero--btns{
+            width:80%;
+            justify-content: space-between;
+        }
+        .large--btn{
+            padding:10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
     }
     
     /* Media Query for Laptops and Desktops */
     @media screen and (min-width: 1025px) and (max-width: 1280px){
-    
+        .header-info{
+            width: 60%;
+        }
+        .hero-section h1{
+            font-size: 48px;
+
+        }
+        
+        .hero-section p{
+            font-size:22px;
+
+        }
     }
     
     /* Media Query for Large screens */

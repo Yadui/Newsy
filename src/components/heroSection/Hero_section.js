@@ -33,7 +33,7 @@ const Hero_section = () => {
                                         Audience intelligence, brand trackers, reports and articles – compiled using 25,000 data variables from the Newsy Cube.
                                     </p>
                                     <div className="hero--btns">
-                                        <button className="btn large--btn hero--left--btn">Try the Newsy Platform</button>
+                                        <button className="btn large--btn hero--left--btn">Newsy Platform</button>
                                         <button className="btn large--btn hero--right--btn">Launch a Survey</button>
                                     </div>
                                 </div>                        
