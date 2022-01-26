@@ -60,7 +60,15 @@ tabs2.forEach((tab) => {
         tabssContent.forEach((tabContent) => {
             tabContent.classList.remove('active-tab')
         })
-        target.classList.add('active-tab')
+        if(target!= null){
+            target.classList.add('active-tab')
+        }
+        else{
+            // There is some error if user selects tabs too frequently then target is null so error is thrown
+            // So using reload to tackle that 
+            // eslint-disable-next-line no-restricted-globals
+            location.reload()
+        }
     })
 })
 //! ------------------------------------------------------------------------------------------------------------------------------------
