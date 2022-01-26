@@ -9,7 +9,7 @@ import "./StaticNewsCards.css"
 
 import SkeletonElement from "../../Cards/SkeletonElement";
 // Dont use it extensively to avoid being exhausted and then tab-nav-bar will also not work
-//News api - b60a32a06ad349b4ab967f476c873ffe
+//News api - c957fa442ba64071b52a79befb5966b5
 // Countries : in, us, ca, gb(for uk)
 // countries code : https://newsapi.org/sources
 
@@ -22,7 +22,7 @@ const StaticNewsCards = () => {
     // Everytime we fetch data we set loading to true
     setLoading(true)
 
-    const API_KEY = "b60a32a06ad349b4ab967f476c873ffe";
+    const API_KEY = "c957fa442ba64071b52a79befb5966b5";
     let NEWS_API_URL =
         "https://newsapi.org/v2/top-headlines?country=" +
         countryId +

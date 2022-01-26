@@ -8,8 +8,9 @@
 }
 
 .wrapper{
-    text-align:center;
-    margin:50px auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 .tabs{
@@ -33,7 +34,7 @@
     position:relative;
     z-index:1;
     transition-duration:0.6s;
-}   
+}
 
 .tabs a.active{
     color:#fff;
@@ -69,7 +70,6 @@
     display: none;
 }
 .active-tab[data-tab-content]{
-    display: block;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     
@@ -89,10 +89,10 @@
     }
     
     /* Media Query for low resolution  Tablets, Ipads */
-    /*! To be dealt most  */
-    @media screen and (min-width: 481px) and (max-width: 767px) {
-        .tab-menu{
-            width:70%;
+    /* Targetting Tab Nav bar  */
+    @media screen and (max-width: 513px) {
+        .wrapper{
+            width:400px;
         }
     }
     
