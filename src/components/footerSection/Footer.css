@@ -119,6 +119,9 @@
         .footer-info{
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         }
+        .footer h4, .copyright {
+            text-align: center;
+        }
     }
     
     /* Media Query for low resolution  Tablets, Ipads */
@@ -127,6 +130,10 @@
         .footer-info{
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         }
+        .footer h4 , .copyright{
+            text-align: center;
+        }
+        
     }
     
     /* Media Query for Tablets Ipads portrait mode */

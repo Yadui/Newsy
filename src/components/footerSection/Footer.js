@@ -26,7 +26,6 @@ const Footer = () => {
                             <div className="footer-share-quote">
                                 <h4>Share, Get Good karma , Get more karma, Repeat.</h4>
                             </div>
-                            <p>Reminder : change icons here , Use svg not png</p>
                             <div className="footer-logo-flex-container">
                                 <div className="footer-logos">
                                     <div className="footer--logo">
