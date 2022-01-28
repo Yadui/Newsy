@@ -12,9 +12,9 @@
     align-items: center;
 
 }
-.hero-section{
+/* .hero-section{
 
-}
+} */
 
 
 .header-nav{
@@ -59,8 +59,8 @@
     padding: 7px 14px;
     color:#241d36;
 }
-.navigations a{
-}
+/* .navigations a{
+} */
 .active--nav{
     border-radius: 50px;
     padding: 10px 20px;
@@ -95,10 +95,10 @@
     flex-direction: column;
     justify-content: center;
 }
-.header-container {
+/* .header-container {
     
     
-}
+} */
 .header-container-inner{
     width:40vw;
     
@@ -108,8 +108,8 @@
     
     /* margin:100px */
 }
-.header-info{
-}
+/* .header-info{
+} */
 
 .hero-section h1{
     font-size: 62px;
@@ -131,9 +131,9 @@
     align-items: center;
     gap:50px;
 }
-.hero-section .btn{
+/* .hero-section .btn{
 
-}
+} */
 
 .hero--left--btn{
     color: #e9e8eb;
@@ -152,7 +152,47 @@
 
     /* Media Query for Mobile Devices */
     @media  screen and (max-width: 481px) {
+        .background-container{
+            background-position-x: 40%;
+        }
+    
+        .navigations {
+            display: none;
+        }
+        .navigations-responsive{
+            display: block;
+        }
+        .nav-bar {
+            cursor: pointer;
+        }
+        .nav-bar-items{
+            display: none;
+        }
+        /* .navigation-res a{
+    
+        } */
+        .header-info{
+            width: 80%;
+        }
+        .hero-section h1{
+            font-size: 36px;
 
+        }
+        
+        .hero-section p{
+            font-size:18px;
+
+        }
+        
+        .hero--btns{
+            width:100%;
+            gap:15px;
+        }
+        .large--btn{
+            padding: 9px;
+            font-size: 16px;
+            font-weight: 700;
+        }
     }
     /* Media Query for low resolution  Tablets, Ipads */
     /*! To be dealt most  */
@@ -174,14 +214,14 @@
         .nav-bar-items{
             display: none;
         }
-        .navigation-res a{
+        /* .navigation-res a{
     
-        }
+        } */
         .header-info{
             width: 60%;
         }
         .hero-section h1{
-            font-size: 36px;
+            font-size: 44px;
 
         }
         
@@ -201,6 +241,7 @@
         }
     }
     
+
     /* Media Query for Tablets Ipads portrait mode */
     @media screen and (min-width: 768px) and (max-width: 1024px){
         .background-container{
@@ -211,8 +252,7 @@
             width: 60%;
         }
         .hero-section h1{
-            font-size: 40px;
-
+            font-size: 44px;
         }
         
         .hero-section p{

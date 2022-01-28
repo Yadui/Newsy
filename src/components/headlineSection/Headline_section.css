@@ -77,14 +77,22 @@
 
     /* Media Query for Mobile Devices */
     @media  screen and (max-width: 480px) {
-
+        .headline-header h2{
+            font-size: 30px;
+        }  
+        .headline-header p{
+            font-size:18px;
+        }
     }
     
     /* Media Query for low resolution  Tablets, Ipads */
     /*! To be dealt most  */
     @media screen and (min-width: 481px) and (max-width: 767px) {
-        .tab-menu{
-            width:70%;
+        .headline-header h2{
+            font-size: 30px;
+        }  
+        .headline-header p{
+            font-size:18px;
         }
     }
     

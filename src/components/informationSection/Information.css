@@ -61,9 +61,23 @@
 
 } */
 
+    /* Media Query for Mobile Devices */
+    @media  screen and (max-width: 480px) {
+        .instructions h2{
+            font-size: 30px;
+        }
+        .inst-cards{
+            grid-template-columns: 1fr;
+        }
+
+    }
+
     /* Media Query for low resolution  Tablets, Ipads */
     /*! To be dealt most  */
     @media screen and (min-width: 481px) and (max-width: 767px) {
+        .instructions h2{
+            font-size: 30px;
+        }
         .inst-cards, .all-cards{
         grid-template-columns: 80%;
         justify-content: center;
@@ -75,7 +89,9 @@
     
     /* Media Query for Tablets Ipads portrait mode */
     @media screen and (min-width: 768px) and (max-width: 1024px){
-
+        .instructions h2{
+            font-size: 30px;
+        }
     }
     
     /* Media Query for Laptops and Desktops */
