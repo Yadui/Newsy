@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import "./Hero_section.css";
-import hamburgerIcon from '../../images/list.png';
+import hamburgerIcon from '../../images/menu2.png';
 
 
 const Hero_section = () => {
@@ -18,7 +18,7 @@ const Hero_section = () => {
     return(
         <div>
             <nav className="header-nav">
-                <div className="logo">LOGO</div>
+                <div className="logo">NEWSY</div>
                 <div className="navigations">
                     <a href="#" className="navigation">Home</a>
                     <a href="#" className="navigation">About</a>
