@@ -15,7 +15,7 @@ import SkeletonElement from "../../Cards/SkeletonElement";
 
 const StaticNewsCards = () => {
     const [articles, setArticles] = useState([]);
-    const [countryId, setCountryId] = useState("kr");
+    const [countryId, setCountryId] = useState("in");
     const [isLoading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -62,40 +62,40 @@ const StaticNewsCards = () => {
 
                             <a
                                 href="#"
-                                data-tab-target="#All"
+                                data-tab-target="#India"
                                 className="active"
-                                onClick={() => setCountry("kr")}
+                                onClick={() => setCountry("in")}
                             >
-                                <i className="fab fa-superpowers"></i>All
+                                India
                             </a>
                             <a
                                 href="#"
-                                data-tab-target="#India"
-                                onClick={() => setCountry("in")}
+                                data-tab-target="#Malaysia"
+                                onClick={() => setCountry("my")}
                             >
-                                <i className="fas fa-hand-rock"></i>
-                                India
+                                
+                                Malaysia
                             </a>
                             <a 
                                 href="#" 
                                 data-tab-target="#USA" 
                                 onClick={() => setCountry("us")}
                             >
-                                <i className="fas fa-bolt"></i>USA
+                                USA
                             </a>
                             <a 
                                 href="#"
                                 data-tab-target="#UK"
                                 onClick={() => setCountry("gb")}
                             >
-                                <i className="fas fa-burn"></i>UK
+                                UK
                             </a>
                             <a
                                 href="#"
                                 data-tab-target="#Canada"
                                 onClick={() => setCountry("ca")}
                             >
-                                <i className="fas fa-burn"></i>Canada
+                                Canada
                             </a>
                     </nav>
                 </div>
@@ -119,12 +119,12 @@ const StaticNewsCards = () => {
             )}
             {isLoading || (
                 <div>
-                    <div id="All" data-tab-content className="active-tab">
+                    <div id="India" data-tab-content className="active-tab">
                         {articles.map((article) => {
                             return (
                                 <div>
                                     <Card
-                                        tab="All"
+                                        tab="India"
                                         urlToImage={article.urlToImage || 'https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png'}
                                         publishedAt={article.publishedAt}
                                         srcName={article.source.name}
@@ -138,7 +138,7 @@ const StaticNewsCards = () => {
                     </div>
                     
                     <CountryTab 
-                        countryId = "India"
+                        countryId = "Malaysia"
                         articles = {articles}
                     />
 
