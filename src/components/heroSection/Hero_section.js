@@ -1,8 +1,20 @@
-import React from 'react';
-import "./Hero_section.css"
+import React, {useState} from 'react';
+import "./Hero_section.css";
+import hamburgerIcon from '../../images/list.png';
 
 
 const Hero_section = () => {
+
+    const [isShowHamNav, ShowHamNav] = useState(false)
+
+        const toogleHamNav = () => {
+            if (isShowHamNav === false){
+                ShowHamNav(true)
+            }
+            else{
+                ShowHamNav(false)
+            }
+        }
     return(
         <div>
             <nav className="header-nav">
@@ -13,13 +25,13 @@ const Hero_section = () => {
                     <a href="#" className="navigation">Team</a>
                     <a href="#" className="navigation active--nav">Contact</a>
                 </div>
-                <div className="navigations-responsive">
-                    <div className="nav-bar active--nav">Nav</div>
+                    <div className="hamburger-head" onClick={toogleHamNav}><img src={hamburgerIcon} width = "28px"/></div>
+                <div className={!isShowHamNav ?"hamburger-nav-desktop" : "hamburger-nav-mobile"}>
                     <div className="nav-bar-items">
-                        <a href="#" className="navigation navigation-res">Home</a>
-                        <a href="#" className="navigation navigation-res">About</a>
-                        <a href="#" className="navigation navigation-res">Team</a>
-                        <a href="#" className="navigation navigation-res">Contact</a>
+                        <a href="#" className="ham-nav-item">Home</a>
+                        <a href="#" className="ham-nav-item">About</a>
+                        <a href="#" className="ham-nav-item">Team</a>
+                        <a href="#" className="ham-nav-item">Contact</a>
                     </div>
                 </div>
             </nav>
