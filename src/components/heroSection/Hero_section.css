@@ -3,7 +3,7 @@
 /* Hero Section  */
 .background-container{
     height: 100vh;
-    background-image: url(/src/images/newsy_img2.jpg);
+    background-image: url(/src/images/hero_image2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
