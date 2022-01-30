@@ -19,14 +19,20 @@ const Information = () => {
                                     <img src={category_logo} alt="" />
                                 </div>
                                 <h4 className="inst--head">News By Categories</h4>
-                                <p className="inst--content">Business, Entertainement, General, Health, Souce, Sports, Technology</p>
+                                <p className="inst--content">
+                                Try Sepaking : <br></br>
+                                Business, Entertainement, General, Health, Souce, Sports, Technology
+                                </p>
                             </div>
                             <div className="inst--card">
                                 <div className="inst-logo">
                                     <img src={term_logo} alt="" />
                                 </div>
                                 <h4 className="inst--head">News By Terms</h4>
-                                <p className="inst--content">Bitcoin, Playstation 5, Smartphones, Donald Trump</p>
+                                <p className="inst--content">
+                                Try Speaking : <br></br>
+                                Bitcoin, Playstation 5, Smartphones, Donald Trump
+                                </p>
                                 
                             </div>
                             <div className="inst--card">
@@ -34,7 +40,10 @@ const Information = () => {
                                     <img src={source_logo} alt="" />
                                 </div>
                                 <h4 className="inst--head">News by Sources</h4>
-                                <p className="inst--content">CNN, Wired, BBC News, Time, IGN, Buzzfeed, ABC News</p>
+                                <p className="inst--content">
+                                Try Speaking : <br></br>
+                                CNN, Wired, BBC News, Time, IGN, Buzzfeed, ABC News
+                                </p>
 
                             </div>
                         </div>

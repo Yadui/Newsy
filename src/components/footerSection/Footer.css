@@ -56,12 +56,23 @@
     }
     /* .footer-developer{
         
+    }*/
+    .team-footer{
+        margin-bottom: 30px;
     }
-    .footer-share{
+
+    .footer-developer h5{
+        font-size: 16px;
+        color:#97949e;
+    }
+    .footer-developer p{
+        margin-left: 20px;
+    }
+    /* .footer-share{
         
-    }
+    } */
     
-    .footer-share-quote{
+    /* .footer-share-quote{
     } */
     
     .footer-logo-flex-container{

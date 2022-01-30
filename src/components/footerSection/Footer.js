@@ -17,10 +17,15 @@ const Footer = () => {
                     <div className="footer-info">
                         <div className="footer-developer">
                             <h4>Developed by</h4>
-                            <p>Dev kumar</p>
-                            <p>Abhinav</p>
-                            <p>Dr Sushil</p>
-                            <p>Abhinav</p>
+                            <div className='team-footer'>
+                                <h5>Team</h5>
+                                <p>Dev kumar Gupta 20001003035</p>
+                                <p>Abhinav 20001003002</p>
+                            </div>
+                            <div className='team-supervisor'>
+                                <h5>Project Supervisor</h5>
+                                <p>Dr Sushil Kumar</p>
+                            </div>
                         </div>
                         <div className="footer-share">
                             <div className="footer-share-quote">
@@ -49,11 +54,11 @@ const Footer = () => {
                         </div>
                         <div className="footer-about">
                             <h4>About us</h4>
-                            <p>At the heart of our company is a global online community, where millions of people and thousands of political, cultural and commercial organisations engage in a continuous conversation about their beliefs, behaviours and brands.</p>
+                            <p>We are students of JC BOSE UNIVERSITY OF SCIENCE AND TECHNOLOGY , currently studing in 3rd sem B.Tech Computer Engineering . This site is developed as a News Project for 3rd sem Minor Project.</p>
                         </div>
                     </div>
                     <div className="copyright">
-                        <p>Copyright © 2021 Newsy PLC. All Rights Reserved.</p>
+                        <p>Copyright © 2022 NEWSY. All Rights Reserved.</p>
                     </div>
                 </div>
             </footer>

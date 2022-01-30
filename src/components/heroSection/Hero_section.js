@@ -40,9 +40,9 @@ const Hero_section = () => {
                         <div className="header">
                             <div className="header-container container-center">
                                 <div className="header-container-inner header-info">
-                                    <h1>DEFINITIVE CONSUMER DATA FOR TECHNOLOGY</h1>
+                                    <h1>REST YOUR FINGERS, TRY NEWSY</h1>
                                     <p>
-                                        Audience intelligence, brand trackers, reports and articles – compiled using 25,000 data variables from the Newsy Cube.
+                                        Voice intelligence, brand trackers, reports and articles – compiled using data from the News API Source.
                                     </p>
                                     <div className="hero--btns">
                                         <button className="btn large--btn hero--left--btn">Newsy Platform</button>

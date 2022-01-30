@@ -80,12 +80,10 @@ tabs2.forEach((tab) => {
                     <div>
                         <div className="headline-section-container">
                             <div className="headline-header headline-center">
-                            <h2>Unrivalled intelligence on the Technology sector</h2>
+                            <h2>Top Headlines from Countries</h2>
                             <p>
-                                Leveraging our proprietary panel of 15 million people worldwide, YouGov 
-                                has over 10 years of data and insights on the Technology sector. Explore 
-                                a range of curated highlights on the latest in digital trends below, or 
-                                contact us to dig much, much deeper.
+                                Articles , news on different topics from around world all delivered at one place without typing with ALAN voice Assisstant.
+                                NEWSY fetches news from  Newsapi , the most reliable source for news and provides you with variety of news
                             </p>
                         </div>
                         <div className="headline-container">
