@@ -3,7 +3,7 @@
 /* Hero Section  */
 .background-container{
     height: 100vh;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.05) ), url(/src/images/hero_image2.jpg);
+    background: linear-gradient(to right, rgba(36, 29, 54, .3), rgba(36, 29, 54, 0.5) ), url(/src/images/hero_image2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
@@ -35,6 +35,7 @@
     border-radius: 10px;
     
     position: fixed;
+    z-index: 1;
     
     
     flex-wrap: wrap;

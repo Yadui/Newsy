@@ -1,7 +1,100 @@
-intent('What does this app do?', 'What can I do here?', 
-      reply('This is a news project.'));
+intent('What is this app do?', 
+      reply('This is NEWSY , voice assissted news app'));
+intent('What is your name ?','(who| what ) are you ?',
+    reply('My name is Newsy , I am here to ease your life so that you can get all the news with voice command only',
+          'I am Newsy, your News assisstant. Would you like something in News ?'));
 
-const API_KEY = '6c0701cd55ef4880a5e369dc9a95311f';
+
+intent('What can I do here ?', 'what does this app do?',
+       'What are you supposed to do?', 
+       'How can I get news?',
+       'Can you tell me what to do here?','I am stuck here', 'I am new here', 'I dont know anything here',
+        'help me',
+      reply('You can search news by categories , terms or sources',
+            'Try saying (Give me the latest news | Give me the top headlines | India|ABC news| football| cricket| bollywood| Spiderman | Attack on titan |samsung | realme | CNN | NFT| technology | Metaverse)',
+           ))
+
+
+intent(
+    'hello',
+    'hi (there|)',
+    'what\'s up',
+    reply(
+        'Hello',
+        'Hi (there|do you need news updates?)',
+        'Hi, which news can I get for you?',
+    ),
+);
+
+question(
+    'how are you',
+    reply('I\'m doing well. (Thank you| would you be liked to get updated about the latest?)'),
+);
+
+
+
+question(
+    '(Who is your boss|who created you?)',
+    reply(
+        'My boss is the one who programmed me. (But you\'re my boss right now|)',
+        'You\'re the boss. What do you need?',
+    ),
+);
+
+question(
+    'Are you (busy|occupied)',
+    reply(
+        'I\'m never too busy. What would you like?',
+        'I\'m available now. What would you like?',
+        'No, what do you need?',
+    ),
+);
+
+question(
+    'You are (a|an|) $(Q chatbot|robot|AI)',
+    reply(
+        'I\'m a (sophisticated|advanced) $(Q)',
+        'I\'m an advanced AI',
+        'I\'m not a $(Q chatbot), I\'m Newsy (your News Voice assisstant|).',
+    ),
+);
+
+question(
+    'My name is $(NAME)',
+    reply('(Nice to meet you|Hi|Hello) $(NAME) (I\'m Newsy |my name is Newsy)'),
+);
+
+question(
+    'Talk about yourself',
+    '(Tell me|Talk) some(thing|stuff|things) about (you|yourself)',
+    'I want to know (more about you|you better)',
+    reply('I\'m Nesy, a voice assisted News app, and i help you read your daily news, (within this application.|) (I can help you get what you need|I can help you with anything within my programming).'),
+);
+
+question(
+    '$(L Nice|Good|Great) to $(Q see|meet|talk to) you ',
+    reply('$(L) to $(Q) you too'),
+);
+
+question(
+    'Why are you here',
+    'Why do you exist',
+    reply('I\'m here to help you get (what|anything) you need in this news application.'),
+);
+
+question(
+    '(test|testing)',
+    '(test test|testing testing)',
+    '(test test test|testing testing testing)',
+    '(I am|) just testing you',
+    reply('Test away (and let me know how I\'m doing|)'),
+);
+
+
+
+
+
+const API_KEY = 'cb8abb3be19f4b5d9e7176a2de186bfe';
 let savedArticles = [];
 
 // News by Source
