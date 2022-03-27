@@ -12,3 +12,5 @@ This app uses Alan AI for its voice controls.
 It is a third party app with many uses which allows us to use unique commands to output in likewise fashion, unique lines.
 It has also enabled us to use casual conversation with alan to know more about the project.
 
+To run app on local machine, clone this repository to vs code(ideal ide). Then, run the commands npm i and npm start, in that order.
+The commands should be run through App.js.
